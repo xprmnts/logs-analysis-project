@@ -18,6 +18,7 @@ db = psycopg2.connect("dbname=news")
 c = db.cursor()
 
 # Start Question 1) -----------------------------------------------------------
+
 query = """
 select articles.title, count(*) as Views
 from log
@@ -39,8 +40,10 @@ for article in top_3_articles:
     rank += 1
 
 print("-" * 80 + "\n\n")
+
 # Finish Question 1) ----------------------------------------------------------
 # Start Question 2) -----------------------------------------------------------
+
 query = """
 select authors.name, count(*) as Views
 from log
@@ -54,14 +57,19 @@ popular_authors = c.fetchall()
 # Printing Results
 print("-" * 80)
 print("The most popular authors of all time are:\n")
+
 rank = 1
+
 for author in popular_authors:
     print("%i. Name: %s | Total Views All Time: %i" %
           (rank, author[0], author[1]))
     rank += 1
+
 print("-" * 80 + "\n\n")
+
 # Finish Question 2) ----------------------------------------------------------
 # Start Question 3) -----------------------------------------------------------
+
 query = """
 select E.errors, V.views, E.day,
 ((cast(E.errors as float) / cast(V.views as float))*100) as rate
@@ -81,12 +89,16 @@ high_error_days = c.fetchall()
 # Printing Results
 print("-" * 80)
 print("The days where more than 1% of requests lead to errors are:\n")
+
 rank = 1
+
 for day in high_error_days:
     print("Date: %s | Error Rate (%s): %.2f" %
           (day[2].strftime('%B, %d %Y'), '%', day[3]))
     rank += 1
+
 print("-" * 80 + "\n\n")
+
 # Finish Question 3) ----------------------------------------------------------
 
 db.close()
