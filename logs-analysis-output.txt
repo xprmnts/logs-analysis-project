@@ -1,0 +1,31 @@
+------------------------------Running Log Analysis------------------------------
+Connecting to database...
+
+--------------------------------------------------------------------------------
+The most popular three articles of all time are:
+
+1. Title: Candidate is jerk, alleges rival | Total Views All Time: 338647
+2. Title: Bears love berries, alleges bear | Total Views All Time: 253801
+3. Title: Bad things gone, say good people | Total Views All Time: 170098
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+The most popular authors of all time are:
+
+1. Name: Ursula La Multa | Total Views All Time: 507594
+2. Name: Rudolf von Treppenwitz | Total Views All Time: 423457
+3. Name: Anonymous Contributor | Total Views All Time: 170098
+4. Name: Markoff Chaney | Total Views All Time: 84557
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+The days where more than 1% of requests lead to errors are:
+
+Date: July, 17 2016 | Error Rate (%): 2.26
+--------------------------------------------------------------------------------
+
+
+Closing connection to database...
+Bye!
